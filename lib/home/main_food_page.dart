@@ -1,5 +1,6 @@
 import 'package:e_commerce_app/utils/colors.dart';
 import 'package:e_commerce_app/widgets/big_text.dart';
+import 'package:e_commerce_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 
 class MainFoodPage extends StatefulWidget {
@@ -24,8 +25,13 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 children: [
                   Column(
                     children: [
-                      BigText(text: "Vietnam"),
-                      Text("City"),
+                      BigText(text: "Vietnam", color: AppColors.mainColor, size: 30,),
+                      Row(
+                        children: [
+                          SmallText(text:"City", color: Colors.black54,),
+                          Icon(Icons.arrow_drop_down_outlined)
+                        ],
+                      ),
                     ],
                   ),
                   Center(
