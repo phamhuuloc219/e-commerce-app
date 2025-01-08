@@ -25,7 +25,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 children: [
                   Column(
                     children: [
-                      BigText(text: "Vietnam", color: AppColors.mainColor, size: 30,),
+                      BigText(text: "Việt Nam", color: AppColors.mainColor, size: 30,),
                       Row(
                         children: [
                           SmallText(text:"Nha Trang", color: Colors.black54,),
