@@ -9,4 +9,4 @@
     </a>
 </p>
 <hr>
-<p>Use Flutter to build a commercial application</p>
+<h3 align="center">Use Flutter to build a commercial application</h3>
