@@ -47,7 +47,8 @@ class _ExpandableTextState extends State<ExpandableText> {
                   },
                   child: Row(
                     children: [
-                      SmallText(text: "Show more", color: AppColors.mainColor),
+                      hiddenText ? SmallText(text: "Show more", color: AppColors.mainColor)
+                      :SmallText(text: "Show less", color: AppColors.mainColor),
                       Icon(hiddenText
                           ? Icons.arrow_drop_down
                           : Icons.arrow_drop_up

@@ -47,6 +47,7 @@ class PopularFoodDetails extends StatelessWidget {
           Positioned(
             left: 0,
             right: 0,
+            bottom: 0,
             top: Dimensions.popularFoodImgSize - 20,
             child: Container(
               padding: EdgeInsets.only(
@@ -69,11 +70,15 @@ class PopularFoodDetails extends StatelessWidget {
                   BigText(text: "Introduce"),
                   SizedBox(height: Dimensions.height20,),
                   // expandable text widget
-                  ExpandableText(text: "Do nhà có chuyện gấp nên cần sang tất cả các giày dép người lớn và trẻ em cho ai cần ib e ạ đầy đủ dép quảng châu dép thường sandan ,giày thể thao ,cặp Do nhà có chuyện gấp nên cần sang tất cả các giày dép người lớn và trẻ em cho ai cần ib e ạ đầy đủ dép quảng châu dép thường sandan ,giày thể thao ,cặp ")
+                  Expanded(
+                    child: SingleChildScrollView(
+                        child: ExpandableText(text: "Do nhà có chuyện gấp nên cần sang tất cả các giày dép người lớn và trẻ em cho ai cần ib e ạ đầy đủ dép quảng châu dép thường sandan ,giày thể thao ,cặp Do nhà có chuyện gấp nên cần sang tất cả các giày dép người lớn và trẻ em cho ai cần ib e ạ đầy đủ dép quảng châu dép thường sandan ,giày thể thao ,cặp ")),
+                  )
                 ],
               ),
             ),
           ),
+
 
         ],
       ),
@@ -81,15 +86,15 @@ class PopularFoodDetails extends StatelessWidget {
         height: Dimensions.bottomHeightBar,
         padding: EdgeInsets.only(
             top: Dimensions.height30,
-            bottom: Dimensions.height30,
-            left: Dimensions.width20,
-            right: Dimensions.width20
+            bottom: Dimensions.height20,
+            left: Dimensions.width30,
+            right: Dimensions.width30
         ),
         decoration: BoxDecoration(
           color: AppColors.buttonBackgroundColor,
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(Dimensions.radius20*2),
-            topRight: Radius.circular(Dimensions.radius20*20)
+            topRight: Radius.circular(Dimensions.radius20*2)
           )
         ),
         child: Row(
