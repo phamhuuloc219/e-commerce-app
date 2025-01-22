@@ -86,11 +86,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           ),
         ),
         // list food
-        Container(
-          height: 1330,
-          child: ListView.builder(
+        ListView.builder(
             physics: NeverScrollableScrollPhysics(),
-            // shrinkWrap: true,
+            shrinkWrap: true,
             itemCount: 10,
             itemBuilder: (context, index) {
               return Container(
@@ -99,8 +97,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                   children: [
                     // image section
                     Container(
-                      width: 120,
-                      height: 120,
+                      width: Dimensions.listViewImgSize,
+                      height: Dimensions.listViewImgSize,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(Dimensions.radius20),
                         color: Colors.white38,
@@ -113,7 +111,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                     // text container
                     Expanded(
                       child: Container(
-                        height: 100,
+                        height: Dimensions.listViewTextContSize,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
                             topRight: Radius.circular(Dimensions.radius20),
@@ -125,8 +123,11 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         child: Padding(
                           padding: EdgeInsets.only(left: Dimensions.width10, right: Dimensions.width10),
                           child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               BigText(text: "Nutritious fruit meal in Vietnam"),
+                              SizedBox(height: Dimensions.height10,),
                               SmallText(text: "With Vietnamese characteristics"),
                               SizedBox(height: Dimensions.height10,),
                               Row(
@@ -159,7 +160,6 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               );
             },
           ),
-        ),
       ],
     );
   }
