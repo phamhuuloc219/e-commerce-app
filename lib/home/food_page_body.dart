@@ -150,7 +150,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         SmallText(text: "comments")
                       ],
                     ),
-                    SizedBox(height: Dimensions.height20,),
+                    SizedBox(height: Dimensions.height10,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
