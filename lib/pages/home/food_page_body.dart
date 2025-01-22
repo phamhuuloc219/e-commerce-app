@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:e_commerce_app/utils/colors.dart';
 import 'package:e_commerce_app/utils/dimensions.dart';
+import 'package:e_commerce_app/widgets/app_column.dart';
 import 'package:e_commerce_app/widgets/big_text.dart';
 import 'package:e_commerce_app/widgets/icon_and_text_widget.dart';
 import 'package:e_commerce_app/widgets/small_text.dart';
@@ -226,52 +227,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               ),
               child: Container(
                 padding: EdgeInsets.only(top: Dimensions.height15, left: 15, right: 15),
-                child: Column(
-                  children: [
-                    BigText(text: "Vietnamese cuisine"),
-                    SizedBox(height: Dimensions.height10,),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Wrap(
-                          children: List.generate(
-                              5, (index) {
-                            return Icon(
-                              Icons.star, color: AppColors.mainColor, size: 15,);
-                            },
-                          ),
-                        ),
-                        SizedBox(width: Dimensions.height10,),
-                        SmallText(text: "4.5"),
-                        SizedBox(width: Dimensions.height10,),
-                        SmallText(text: "1287"),
-                        SizedBox(width: Dimensions.height10,),
-                        SmallText(text: "comments")
-                      ],
-                    ),
-                    SizedBox(height: Dimensions.height10,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconAndTextWidget(
-                            icon: Icons.circle_sharp,
-                            text: "Normal",
-                            iconColor: AppColors.iconColor1
-                        ),
-                        IconAndTextWidget(
-                            icon: Icons.location_on,
-                            text: "1.7km",
-                            iconColor: AppColors.mainColor
-                        ),
-                        IconAndTextWidget(
-                            icon: Icons.access_time_rounded,
-                            text: "32min",
-                            iconColor: AppColors.iconColor2
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
+                child: AppColumn(text:"Vietnamese cuisine"),
               ),
             ),
           ),
