@@ -3,8 +3,7 @@ import 'package:e_commerce_app/utils/dimensions.dart';
 import 'package:e_commerce_app/widgets/app_column.dart';
 import 'package:e_commerce_app/widgets/app_icon.dart';
 import 'package:e_commerce_app/widgets/big_text.dart';
-import 'package:e_commerce_app/widgets/icon_and_text_widget.dart';
-import 'package:e_commerce_app/widgets/small_text.dart';
+import 'package:e_commerce_app/widgets/expandable_text.dart';
 import 'package:flutter/material.dart';
 
 class PopularFoodDetails extends StatelessWidget {
@@ -16,6 +15,7 @@ class PopularFoodDetails extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          // background image
           Positioned(
             left: 0,
             right: 0,
@@ -30,6 +30,7 @@ class PopularFoodDetails extends StatelessWidget {
               ),
             ),
           ),
+          // icon widget
           Positioned(
             top: Dimensions.height45,
             left: Dimensions.width20,
@@ -42,6 +43,7 @@ class PopularFoodDetails extends StatelessWidget {
                 ],
               ),
           ),
+          // introduction of food
           Positioned(
             left: 0,
             right: 0,
@@ -64,11 +66,15 @@ class PopularFoodDetails extends StatelessWidget {
                 children: [
                   AppColumn(text:"Vietnamese cuisine"),
                   SizedBox(height: Dimensions.height20,),
-                  BigText(text: "Introduce")
+                  BigText(text: "Introduce"),
+                  SizedBox(height: Dimensions.height20,),
+                  // expandable text widget
+                  ExpandableText(text: "Do nhà có chuyện gấp nên cần sang tất cả các giày dép người lớn và trẻ em cho ai cần ib e ạ đầy đủ dép quảng châu dép thường sandan ,giày thể thao ,cặp Do nhà có chuyện gấp nên cần sang tất cả các giày dép người lớn và trẻ em cho ai cần ib e ạ đầy đủ dép quảng châu dép thường sandan ,giày thể thao ,cặp ")
                 ],
               ),
             ),
           ),
+
         ],
       ),
       bottomNavigationBar: Container(
