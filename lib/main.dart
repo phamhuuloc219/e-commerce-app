@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/pages/food/popular_food_details.dart';
+import 'package:e_commerce_app/pages/food/recommended_food_detail.dart';
 import 'package:e_commerce_app/pages/home/main_food_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: MainFoodPage(),
-      home: PopularFoodDetails(),
+      // home: PopularFoodDetails(),
+      home: RecommendedFoodDetail(),
     );
   }
 }
